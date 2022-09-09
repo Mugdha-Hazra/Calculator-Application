@@ -1,4 +1,4 @@
-package com.example.calcapp
+package com.mugdha.calculatorApp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package com.example.calcapp
+package com.mugdha.calculatorApp
 
 import org.junit.Test
 

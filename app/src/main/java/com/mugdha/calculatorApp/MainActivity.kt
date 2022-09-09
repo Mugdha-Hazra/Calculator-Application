@@ -1,10 +1,13 @@
-package com.example.calcapp
+package com.mugdha.calculatorApp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import com.example.calcapp.R
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.math.pow
+import kotlin.math.sqrt
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +28,6 @@ class MainActivity : AppCompatActivity() {
             when(buSelect.id) {
             bu0.id -> {
                 buClickValue += "0"
-
             }
             bu1.id -> {
                 buClickValue += "1"
@@ -101,6 +103,15 @@ class MainActivity : AppCompatActivity() {
 
                 op="+"
             }
+            buxtopowerofy.id -> {
+
+                op="^"
+            }
+            busqrt.id -> {
+
+                op="√"
+            }
+
 
         }
         oldNumber=etShowNumber.text.toString()
@@ -108,6 +119,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun buEqualEvent(view:View){
+        //call show expression
         val newNumber=etShowNumber.text.toString()
         var finalNumber:Double?=null
         when(op){
@@ -123,6 +135,12 @@ class MainActivity : AppCompatActivity() {
             }
             "-"->{
                 finalNumber=  oldNumber.toDouble() *newNumber.toDouble()
+            }
+            "^"->{
+                finalNumber= oldNumber.toDouble().pow(newNumber.toDouble())
+            }
+            "√"->{
+                finalNumber=  sqrt(oldNumber.toDouble())
             }
         }
         etShowNumber.setText(finalNumber.toString())

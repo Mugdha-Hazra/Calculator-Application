@@ -7,7 +7,20 @@
     android:background="#000000"
     android:orientation="vertical"
     android:padding="10pt"
-    tools:context=".MainActivity">
+    tools:context="com.mugdha.calculatorApp.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/wallpaper"
+        android:layout_weight="1"
+        android:gravity="center"
+
+        android:textAlignment="center"
+        android:textColor="#673AB7"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etShowNumber"
@@ -18,7 +31,7 @@
         android:background="#6B6B6D"
         android:ems="10"
         android:fontFamily="sans-serif"
-        android:gravity="right"
+        android:gravity="center|right"
         android:inputType="textPersonName"
         android:paddingTop="10pt"
         android:shadowColor="#673AB7"
@@ -43,10 +56,11 @@
                 android:layout_height="30pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-                android:background="#D6D6D6"
+                android:background="#F79231"
                 android:onClick="buClean"
                 android:text="AC"
-                android:textSize="24sp" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buplusMinus"
@@ -54,21 +68,50 @@
                 android:layout_height="30pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-                android:background="#D6D6D6"
+                android:background="#F79231"
                 android:onClick="buNumberEvent"
                 android:text="+/-"
-                android:textSize="24sp" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
             <Button
-                android:id="@+id/buPer"
+                android:id="@+id/busqrt"
                 android:layout_width="30pt"
                 android:layout_height="30pt"
                 android:layout_marginRight="2pt"
                 android:layout_weight="1"
-                android:background="#D6D6D6"
+                android:background="#F79231"
+                android:onClick="buOpEevent"
+                android:text="√"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <Button
+                android:background="#F79231"
+                android:id="@+id/buxtopowerofy"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:onClick="buOpEevent"
+                android:text="^"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+
+                />
+
+            <Button
+                android:id="@+id/buPer"
+                android:layout_width="30pt"
+                android:background="#F79231"
+                android:layout_height="30pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
                 android:onClick="buPercent"
                 android:text="%"
-                android:textSize="24sp" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buDiv"
@@ -78,7 +121,7 @@
                 android:background="#F79231"
                 android:onClick="buOpEevent"
                 android:text="/"
-                android:textColor="#ffffff"
+                android:textColor="#455A64"
                 android:textSize="24sp" />
         </TableRow>
 
@@ -128,7 +171,7 @@
                 android:background="#F79231"
                 android:onClick="buOpEevent"
                 android:text="*"
-                android:textColor="#ffffff"
+                android:textColor="#455A64"
                 android:textSize="24sp" />
         </TableRow>
 
@@ -178,7 +221,7 @@
                 android:background="#F79231"
                 android:onClick="buOpEevent"
                 android:text="-"
-                android:textColor="#ffffff"
+                android:textColor="#455A64"
                 android:textSize="24sp" />
         </TableRow>
 
@@ -228,7 +271,7 @@
                 android:background="#F79231"
                 android:onClick="buOpEevent"
                 android:text="+"
-                android:textColor="#ffffff"
+                android:textColor="#455A64"
                 android:textSize="24sp" />
         </TableRow>
     </TableLayout>
@@ -268,7 +311,7 @@
             android:background="#F79231"
             android:onClick="buEqualEvent"
             android:text="="
-            android:textColor="#ffffff"
+            android:textColor="#455A64"
             android:textSize="24sp" />
     </LinearLayout>
 </LinearLayout>
